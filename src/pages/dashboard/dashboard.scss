@@ -1,0 +1,67 @@
+.Dashboard {
+  @apply relative h-screen w-screen overflow-hidden flex flex-col;
+
+  .PageSection {
+    @apply px-[52px] py-[38px] flex-grow flex flex-col overflow-hidden;
+
+    .PageHeader {
+      @apply flex items-center justify-between mb-8;
+
+      h1 {
+        @apply text-[32px] text-dark font-medium;
+      }
+
+      .actions {
+        @apply flex items-center space-x-[3.25rem];
+      }
+    }
+  }
+
+  table.Table {
+    @apply flex-grow overflow-y-hidden w-full h-full grid grid-rows-[auto,1fr];
+    border-spacing: 0;
+
+    thead {
+      @apply bg-grey2 rounded-lg w-full;
+    }
+
+    tbody {
+      @apply bg-white overflow-y-auto;
+    }
+
+    td,
+    th {
+      @apply lg:min-w-[5rem] text-xs lg:text-base;
+      padding: 15px 6px;
+      text-align: left;
+    }
+    th {
+      @apply text-darkGrey text-opacity-50 font-semibold;
+    }
+
+    td {
+      @apply text-grey4 font-medium;
+    }
+  }
+
+  .table-footer {
+    @apply flex items-center justify-between mt-[37px] mb-6;
+  }
+  tr {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+  }
+  .Checkbox {
+    @apply flex items-center justify-center w-6 h-6 border border-[#E0E0E0]  rounded-[1px] cursor-pointer ml-8;
+    &.active {
+      @apply bg-primary border-primary;
+    }
+  }
+  .Modal {
+    @apply fixed z-50 w-full h-full flex flex-col justify-center items-center inset-0 backdrop-blur-sm;
+    .inner {
+      @apply w-[25rem];
+    }
+  }
+}

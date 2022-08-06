@@ -1,0 +1,43 @@
+{
+  "hits": 2,
+  "plans": [
+    {
+      "_id": "62ebd27c29f56a4b42539c66",
+      "market": {
+        "_id": "62ebcbf60afe0ce3ce97e00b",
+        "name": "btcngn",
+        "base_unit": "btc",
+        "quote_unit": "ngn",
+        "createdAt": "2022-08-04T13:39:02.115Z",
+        "updatedAt": "2022-08-04T13:39:02.115Z",
+        "__v": 0
+      },
+      "name": "Leaving the trenches.",
+      "amount": 5,
+      "isActive": true,
+      "schedule": "DAILY",
+      "createdAt": "2022-08-04T14:06:52.487Z",
+      "updatedAt": "2022-08-04T14:06:52.487Z",
+      "__v": 0
+    },
+    {
+      "_id": "62ebd26a29f56a4b42539c5e",
+      "market": {
+        "_id": "62ebcbf60afe0ce3ce97e00b",
+        "name": "btcngn",
+        "base_unit": "btc",
+        "quote_unit": "ngn",
+        "createdAt": "2022-08-04T13:39:02.115Z",
+        "updatedAt": "2022-08-04T13:39:02.115Z",
+        "__v": 0
+      },
+      "name": "Leaving the trenches.",
+      "amount": 5,
+      "isActive": true,
+      "schedule": "DAILY",
+      "createdAt": "2022-08-04T14:06:34.618Z",
+      "updatedAt": "2022-08-04T14:06:34.618Z",
+      "__v": 0
+    }
+  ]
+}

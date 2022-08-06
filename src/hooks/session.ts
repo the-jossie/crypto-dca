@@ -1,16 +1,16 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-const useSessionStorage = (key, defaultValue) => {
+const useSessionStorage = (key: string, defaultValue?: Object) => {
   const [value, setValue] = useState(() => {
     const storedValue = sessionStorage.getItem(key);
     return storedValue ? JSON.parse(storedValue) : defaultValue;
   });
+  const updateValue = (newValue: Object) => {
+    sessionStorage.setItem(key, JSON.stringify(newValue));
+    setValue(newValue);
+  };
 
-  useEffect(() => {
-    sessionStorage.setItem(key, JSON.stringify(value));
-  }, [value, key]);
-
-  return [value, setValue];
+  return [value, updateValue];
 };
 
 const clearSessionStorage = () => {

@@ -1,0 +1,192 @@
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-SemiBoldItalic.eot');
+    src: local('Fellix SemiBold Italic'), local('Fellix-SemiBoldItalic'),
+        url('Fellix-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-SemiBoldItalic.woff2') format('woff2'),
+        url('Fellix-SemiBoldItalic.woff') format('woff'),
+        url('Fellix-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-SemiBold.eot');
+    src: local('Fellix SemiBold'), local('Fellix-SemiBold'),
+        url('Fellix-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-SemiBold.woff2') format('woff2'),
+        url('Fellix-SemiBold.woff') format('woff'),
+        url('Fellix-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-Light.eot');
+    src: local('Fellix Light'), local('Fellix-Light'),
+        url('Fellix-Light.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-Light.woff2') format('woff2'),
+        url('Fellix-Light.woff') format('woff'),
+        url('Fellix-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-Black.eot');
+    src: local('Fellix Black'), local('Fellix-Black'),
+        url('Fellix-Black.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-Black.woff2') format('woff2'),
+        url('Fellix-Black.woff') format('woff'),
+        url('Fellix-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-BlackItalic.eot');
+    src: local('Fellix Black Italic'), local('Fellix-BlackItalic'),
+        url('Fellix-BlackItalic.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-BlackItalic.woff2') format('woff2'),
+        url('Fellix-BlackItalic.woff') format('woff'),
+        url('Fellix-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-ExtraBold.eot');
+    src: local('Fellix ExtraBold'), local('Fellix-ExtraBold'),
+        url('Fellix-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-ExtraBold.woff2') format('woff2'),
+        url('Fellix-ExtraBold.woff') format('woff'),
+        url('Fellix-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-ThinItalic.eot');
+    src: local('Fellix Thin Italic'), local('Fellix-ThinItalic'),
+        url('Fellix-ThinItalic.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-ThinItalic.woff2') format('woff2'),
+        url('Fellix-ThinItalic.woff') format('woff'),
+        url('Fellix-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-Medium.eot');
+    src: local('Fellix Medium'), local('Fellix-Medium'),
+        url('Fellix-Medium.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-Medium.woff2') format('woff2'),
+        url('Fellix-Medium.woff') format('woff'),
+        url('Fellix-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-LightItalic.eot');
+    src: local('Fellix Light Italic'), local('Fellix-LightItalic'),
+        url('Fellix-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-LightItalic.woff2') format('woff2'),
+        url('Fellix-LightItalic.woff') format('woff'),
+        url('Fellix-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-BoldItalic.eot');
+    src: local('Fellix Bold Italic'), local('Fellix-BoldItalic'),
+        url('Fellix-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-BoldItalic.woff2') format('woff2'),
+        url('Fellix-BoldItalic.woff') format('woff'),
+        url('Fellix-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-Thin.eot');
+    src: local('Fellix Thin'), local('Fellix-Thin'),
+        url('Fellix-Thin.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-Thin.woff2') format('woff2'),
+        url('Fellix-Thin.woff') format('woff'),
+        url('Fellix-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-Regular.eot');
+    src: local('Fellix Regular'), local('Fellix-Regular'),
+        url('Fellix-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-Regular.woff2') format('woff2'),
+        url('Fellix-Regular.woff') format('woff'),
+        url('Fellix-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-Bold.eot');
+    src: local('Fellix Bold'), local('Fellix-Bold'),
+        url('Fellix-Bold.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-Bold.woff2') format('woff2'),
+        url('Fellix-Bold.woff') format('woff'),
+        url('Fellix-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-RegularItalic.eot');
+    src: local('Fellix Regular Italic'), local('Fellix-RegularItalic'),
+        url('Fellix-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-RegularItalic.woff2') format('woff2'),
+        url('Fellix-RegularItalic.woff') format('woff'),
+        url('Fellix-RegularItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-ExtraBoldItalic.eot');
+    src: local('Fellix ExtraBold Italic'), local('Fellix-ExtraBoldItalic'),
+        url('Fellix-ExtraBoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-ExtraBoldItalic.woff2') format('woff2'),
+        url('Fellix-ExtraBoldItalic.woff') format('woff'),
+        url('Fellix-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Fellix';
+    src: url('Fellix-MediumItalic.eot');
+    src: local('Fellix Medium Italic'), local('Fellix-MediumItalic'),
+        url('Fellix-MediumItalic.eot?#iefix') format('embedded-opentype'),
+        url('Fellix-MediumItalic.woff2') format('woff2'),
+        url('Fellix-MediumItalic.woff') format('woff'),
+        url('Fellix-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
