@@ -1,0 +1,239 @@
+{
+  "hits": 10,
+  "transactions": [
+    {
+      "_id": "62ebd7e7320c97e683e5522f",
+      "plan": "62ebd27c29f56a4b42539c66",
+      "transaction_id": "vljruihl",
+      "status": "confirm",
+      "total": {
+        "unit": "NGN",
+        "amount": "5.0"
+      },
+      "price": {
+        "unit": "NGN",
+        "amount": "14714700.0"
+      },
+      "fee": {
+        "unit": "BTC",
+        "amount": "0.0000000033"
+      },
+      "receive": {
+        "unit": "BTC",
+        "amount": "0.0000003267"
+      },
+      "createdAt": "2022-08-04T14:29:59.454Z",
+      "updatedAt": "2022-08-04T14:29:59.454Z",
+      "__v": 0
+    },
+    {
+      "_id": "62ebd7e0320c97e683e55226",
+      "plan": "62ebd27c29f56a4b42539c66",
+      "transaction_id": "u3eyfrg6",
+      "status": "confirm",
+      "total": {
+        "unit": "NGN",
+        "amount": "5.0"
+      },
+      "price": {
+        "unit": "NGN",
+        "amount": "14714700.0"
+      },
+      "fee": {
+        "unit": "BTC",
+        "amount": "0.0000000033"
+      },
+      "receive": {
+        "unit": "BTC",
+        "amount": "0.0000003267"
+      },
+      "createdAt": "2022-08-04T14:29:52.199Z",
+      "updatedAt": "2022-08-04T14:29:52.199Z",
+      "__v": 0
+    },
+    {
+      "_id": "62ebd7dc320c97e683e55221",
+      "plan": "62ebd27c29f56a4b42539c66",
+      "transaction_id": "6yevfqfp",
+      "status": "confirm",
+      "total": {
+        "unit": "NGN",
+        "amount": "5.0"
+      },
+      "price": {
+        "unit": "NGN",
+        "amount": "14714700.0"
+      },
+      "fee": {
+        "unit": "BTC",
+        "amount": "0.0000000033"
+      },
+      "receive": {
+        "unit": "BTC",
+        "amount": "0.0000003267"
+      },
+      "createdAt": "2022-08-04T14:29:48.037Z",
+      "updatedAt": "2022-08-04T14:29:48.037Z",
+      "__v": 0
+    },
+    {
+      "_id": "62ebd7d6320c97e683e55218",
+      "plan": "62ebd27c29f56a4b42539c66",
+      "transaction_id": "vyjbcvzy",
+      "status": "confirm",
+      "total": {
+        "unit": "NGN",
+        "amount": "5.0"
+      },
+      "price": {
+        "unit": "NGN",
+        "amount": "14714700.0"
+      },
+      "fee": {
+        "unit": "BTC",
+        "amount": "0.0000000033"
+      },
+      "receive": {
+        "unit": "BTC",
+        "amount": "0.0000003267"
+      },
+      "createdAt": "2022-08-04T14:29:42.137Z",
+      "updatedAt": "2022-08-04T14:29:42.137Z",
+      "__v": 0
+    },
+    {
+      "_id": "62ebd7d1320c97e683e55213",
+      "plan": "62ebd27c29f56a4b42539c66",
+      "status": "error",
+      "message": "BadRequestError: Failed to confirm order.",
+      "createdAt": "2022-08-04T14:29:37.134Z",
+      "updatedAt": "2022-08-04T14:29:37.134Z",
+      "__v": 0
+    },
+    {
+      "_id": "62ebd7cc320c97e683e5520a",
+      "plan": "62ebd27c29f56a4b42539c66",
+      "transaction_id": "eiw6xxga",
+      "status": "confirm",
+      "total": {
+        "unit": "NGN",
+        "amount": "5.0"
+      },
+      "price": {
+        "unit": "NGN",
+        "amount": "14714700.0"
+      },
+      "fee": {
+        "unit": "BTC",
+        "amount": "0.0000000033"
+      },
+      "receive": {
+        "unit": "BTC",
+        "amount": "0.0000003267"
+      },
+      "createdAt": "2022-08-04T14:29:32.097Z",
+      "updatedAt": "2022-08-04T14:29:32.097Z",
+      "__v": 0
+    },
+    {
+      "_id": "62ebd7c8320c97e683e55205",
+      "plan": "62ebd27c29f56a4b42539c66",
+      "transaction_id": "cl4d4ydz",
+      "status": "confirm",
+      "total": {
+        "unit": "NGN",
+        "amount": "5.0"
+      },
+      "price": {
+        "unit": "NGN",
+        "amount": "14714700.0"
+      },
+      "fee": {
+        "unit": "BTC",
+        "amount": "0.0000000033"
+      },
+      "receive": {
+        "unit": "BTC",
+        "amount": "0.0000003267"
+      },
+      "createdAt": "2022-08-04T14:29:28.048Z",
+      "updatedAt": "2022-08-04T14:29:28.048Z",
+      "__v": 0
+    },
+    {
+      "_id": "62ebd7c2320c97e683e551fe",
+      "plan": "62ebd27c29f56a4b42539c66",
+      "transaction_id": "nmhuv6ef",
+      "status": "confirm",
+      "total": {
+        "unit": "NGN",
+        "amount": "5.0"
+      },
+      "price": {
+        "unit": "NGN",
+        "amount": "14714700.0"
+      },
+      "fee": {
+        "unit": "BTC",
+        "amount": "0.0000000033"
+      },
+      "receive": {
+        "unit": "BTC",
+        "amount": "0.0000003267"
+      },
+      "createdAt": "2022-08-04T14:29:22.998Z",
+      "updatedAt": "2022-08-04T14:29:22.998Z",
+      "__v": 0
+    },
+    {
+      "_id": "62ebd7bd320c97e683e551f5",
+      "plan": "62ebd27c29f56a4b42539c66",
+      "transaction_id": "bi64x37p",
+      "status": "confirm",
+      "total": {
+        "unit": "NGN",
+        "amount": "5.0"
+      },
+      "price": {
+        "unit": "NGN",
+        "amount": "14714700.0"
+      },
+      "fee": {
+        "unit": "BTC",
+        "amount": "0.0000000033"
+      },
+      "receive": {
+        "unit": "BTC",
+        "amount": "0.0000003267"
+      },
+      "createdAt": "2022-08-04T14:29:17.095Z",
+      "updatedAt": "2022-08-04T14:29:17.095Z",
+      "__v": 0
+    },
+    {
+      "_id": "62ebd7b9320c97e683e551f0",
+      "plan": "62ebd27c29f56a4b42539c66",
+      "transaction_id": "hg76xd3j",
+      "status": "confirm",
+      "total": {
+        "unit": "NGN",
+        "amount": "5.0"
+      },
+      "price": {
+        "unit": "NGN",
+        "amount": "14714700.0"
+      },
+      "fee": {
+        "unit": "BTC",
+        "amount": "0.0000000033"
+      },
+      "receive": {
+        "unit": "BTC",
+        "amount": "0.0000003267"
+      },
+      "createdAt": "2022-08-04T14:29:13.175Z",
+      "updatedAt": "2022-08-04T14:29:13.175Z",
+      "__v": 0
+    }
+  ]
+}

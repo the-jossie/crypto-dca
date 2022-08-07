@@ -6,4 +6,9 @@ const fetchPlans = async () => {
   return data;
 };
 
-export { fetchPlans };
+const createPlan = async (body: Object) => {
+  const { data } = await axiosInstance.post('plan/create_plan', body);
+  return data;
+};
+
+export { createPlan, fetchPlans };

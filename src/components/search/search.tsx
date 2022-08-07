@@ -31,7 +31,7 @@ function Search({
     <>
       {label && <label className="mb-2 font-bold text-base op">{label}</label>}
       <form
-        className={`SearchInput flex items-center  px-4 py-3 rounded text-sm font-normal bg-grey3 pr-12`}
+        className={`Search flex items-center  px-4 py-3 rounded text-sm font-normal bg-grey3 pr-12`}
         onSubmit={handleSubmit}>
         <SearchIcon />
         <input

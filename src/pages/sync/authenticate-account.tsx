@@ -13,10 +13,9 @@ const AuthenticateAccount = () => {
   const { setUser } = useContext(UserContext);
   const [code, setCode] = useState('');
 
-  const { isError, isLoading, isSuccess, error, mutateAsync } = useMutation(authenticate, {
+  const { isLoading, mutateAsync } = useMutation(authenticate, {
     onSuccess(data) {
       const { message, user } = data.data;
-      console.log(message, user);
       toast.success("Woah! It's you 🤑 \n" + message, {
         icon: false,
       });

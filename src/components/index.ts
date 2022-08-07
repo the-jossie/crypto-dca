@@ -1,5 +1,6 @@
 export * from './button';
 export * from './check-box';
+export * from './dropdown';
 export * from './input';
 export * from './modal';
 export * from './navbar';

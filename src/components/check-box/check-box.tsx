@@ -1,3 +1,5 @@
+import './check-box.scss';
+
 import { useState } from 'react';
 
 function CheckBox({

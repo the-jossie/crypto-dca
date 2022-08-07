@@ -1,13 +1,16 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 
+import { fetchPlans } from '../../api';
 import { DeletePlanModal, EditPlanModal, Table } from '../../components';
 
-interface PropTypes {
-  tableData: any;
-  tableHeadings: any;
-}
-const PlansTable = ({ tableData, tableHeadings }: PropTypes) => {
+const PlansTable = () => {
+  const { isLoading, data } = useQuery(['plans'], fetchPlans);
+  const formattedData = data?.plans?.map((plan: any) => ({
+    ...plan,
+    amount: `${plan?.market?.quote_unit.toUpperCase()} ${plan?.amount}`,
+  }));
+
   const [selectedRow, setSelectedRow] = useState(null);
   const [selectedSites, setSelectedSites] = useState<any[]>([]);
   type modalTypes = 'delete' | 'edit';
@@ -16,7 +19,7 @@ const PlansTable = ({ tableData, tableHeadings }: PropTypes) => {
     open: false,
   });
   const handleRowClick = (id: string, action: string) => {
-    const selected = tableData.find((data: any) => data._id === id);
+    const selected = data?.plans?.find((data: any) => data._id === id);
     setSelectedRow(selected);
     if (action === 'delete') {
       setModal({ type: 'delete', open: true });
@@ -32,8 +35,9 @@ const PlansTable = ({ tableData, tableHeadings }: PropTypes) => {
   return (
     <>
       <Table
-        headings={tableHeadings}
-        {...{ tableData }}
+        name="plans"
+        isLoading={isLoading}
+        tableData={formattedData ?? []}
         clickRowAction={handleRowClick}
         rowActions={[
           {
@@ -57,7 +61,7 @@ const PlansTable = ({ tableData, tableHeadings }: PropTypes) => {
             ),
           },
         ]}
-        id="My-Plan"
+        id="My-Plans"
         selected={selectedSites}
         onSelect={(selectedIds: any) => setSelectedSites(selectedIds)}
       />
@@ -72,7 +76,7 @@ const PlansTable = ({ tableData, tableHeadings }: PropTypes) => {
         <EditPlanModal
           site={selectedRow}
           close={() => setModal({ ...modal, open: false })}
-          {...{ tableData }}
+          tableData={[]}
         />
       )}
     </>

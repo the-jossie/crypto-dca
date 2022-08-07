@@ -1,0 +1,11 @@
+.Dropdown {
+  @apply flex flex-col mt-4 border rounded-md py-2 px-4 bg-transparent w-full;
+
+  label {
+    @apply text-sm;
+  }
+
+  select {
+    @apply bg-transparent focus:outline-none h-8;
+  }
+}

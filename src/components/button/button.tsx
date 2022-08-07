@@ -1,3 +1,5 @@
+import './button.scss';
+
 import { ReactElement } from 'react';
 
 interface PropTypes {

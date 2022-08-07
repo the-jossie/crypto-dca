@@ -1,0 +1,326 @@
+[
+  {
+    "_id": "62ebcbf50afe0ce3ce97e007",
+    "name": "qdxusdt",
+    "base_unit": "qdx",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:01.786Z",
+    "updatedAt": "2022-08-04T13:39:01.786Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf50afe0ce3ce97e009",
+    "name": "btcusdt",
+    "base_unit": "btc",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:01.946Z",
+    "updatedAt": "2022-08-04T13:39:01.946Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e00b",
+    "name": "btcngn",
+    "base_unit": "btc",
+    "quote_unit": "ngn",
+    "createdAt": "2022-08-04T13:39:02.115Z",
+    "updatedAt": "2022-08-04T13:39:02.115Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e00d",
+    "name": "xrpngn",
+    "base_unit": "xrp",
+    "quote_unit": "ngn",
+    "createdAt": "2022-08-04T13:39:02.272Z",
+    "updatedAt": "2022-08-04T13:39:02.272Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e00f",
+    "name": "ltcngn",
+    "base_unit": "ltc",
+    "quote_unit": "ngn",
+    "createdAt": "2022-08-04T13:39:02.278Z",
+    "updatedAt": "2022-08-04T13:39:02.278Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e011",
+    "name": "dashngn",
+    "base_unit": "dash",
+    "quote_unit": "ngn",
+    "createdAt": "2022-08-04T13:39:02.280Z",
+    "updatedAt": "2022-08-04T13:39:02.280Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e013",
+    "name": "usdtngn",
+    "base_unit": "usdt",
+    "quote_unit": "ngn",
+    "createdAt": "2022-08-04T13:39:02.418Z",
+    "updatedAt": "2022-08-04T13:39:02.418Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e015",
+    "name": "trxngn",
+    "base_unit": "trx",
+    "quote_unit": "ngn",
+    "createdAt": "2022-08-04T13:39:02.440Z",
+    "updatedAt": "2022-08-04T13:39:02.440Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e01b",
+    "name": "maticusdt",
+    "base_unit": "matic",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:02.602Z",
+    "updatedAt": "2022-08-04T13:39:02.602Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e01d",
+    "name": "busdusdt",
+    "base_unit": "busd",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:02.605Z",
+    "updatedAt": "2022-08-04T13:39:02.605Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e01f",
+    "name": "usdcusdt",
+    "base_unit": "usdc",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:02.710Z",
+    "updatedAt": "2022-08-04T13:39:02.710Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e021",
+    "name": "aaveusdt",
+    "base_unit": "aave",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:02.757Z",
+    "updatedAt": "2022-08-04T13:39:02.757Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e023",
+    "name": "shibusdt",
+    "base_unit": "shib",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:02.759Z",
+    "updatedAt": "2022-08-04T13:39:02.759Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e025",
+    "name": "dotusdt",
+    "base_unit": "dot",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:02.871Z",
+    "updatedAt": "2022-08-04T13:39:02.871Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e027",
+    "name": "linkusdt",
+    "base_unit": "link",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:02.902Z",
+    "updatedAt": "2022-08-04T13:39:02.902Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e029",
+    "name": "cakeusdt",
+    "base_unit": "cake",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:02.906Z",
+    "updatedAt": "2022-08-04T13:39:02.906Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e02b",
+    "name": "ethngn",
+    "base_unit": "eth",
+    "quote_unit": "ngn",
+    "createdAt": "2022-08-04T13:39:02.946Z",
+    "updatedAt": "2022-08-04T13:39:02.946Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e02d",
+    "name": "qdxngn",
+    "base_unit": "qdx",
+    "quote_unit": "ngn",
+    "createdAt": "2022-08-04T13:39:02.959Z",
+    "updatedAt": "2022-08-04T13:39:02.959Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e02f",
+    "name": "ltcusdt",
+    "base_unit": "ltc",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.018Z",
+    "updatedAt": "2022-08-04T13:39:03.018Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e031",
+    "name": "ethusdt",
+    "base_unit": "eth",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.046Z",
+    "updatedAt": "2022-08-04T13:39:03.046Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e033",
+    "name": "trxusdt",
+    "base_unit": "trx",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.061Z",
+    "updatedAt": "2022-08-04T13:39:03.061Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e037",
+    "name": "dashusdt",
+    "base_unit": "dash",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.132Z",
+    "updatedAt": "2022-08-04T13:39:03.132Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e035",
+    "name": "axsusdt",
+    "base_unit": "axs",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.118Z",
+    "updatedAt": "2022-08-04T13:39:03.118Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e039",
+    "name": "filusdt",
+    "base_unit": "fil",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.160Z",
+    "updatedAt": "2022-08-04T13:39:03.160Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e03b",
+    "name": "babydogeusdt",
+    "base_unit": "babydoge",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.208Z",
+    "updatedAt": "2022-08-04T13:39:03.208Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e03d",
+    "name": "adausdt",
+    "base_unit": "ada",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.218Z",
+    "updatedAt": "2022-08-04T13:39:03.218Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e03f",
+    "name": "oneusdt",
+    "base_unit": "one",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.274Z",
+    "updatedAt": "2022-08-04T13:39:03.274Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e041",
+    "name": "bchusdt",
+    "base_unit": "bch",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.298Z",
+    "updatedAt": "2022-08-04T13:39:03.298Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e047",
+    "name": "flokiusdt",
+    "base_unit": "floki",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.369Z",
+    "updatedAt": "2022-08-04T13:39:03.369Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e043",
+    "name": "xtzusdt",
+    "base_unit": "xtz",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.304Z",
+    "updatedAt": "2022-08-04T13:39:03.304Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e045",
+    "name": "wkdusdt",
+    "base_unit": "wkd",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.367Z",
+    "updatedAt": "2022-08-04T13:39:03.367Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e049",
+    "name": "solusdt",
+    "base_unit": "sol",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.426Z",
+    "updatedAt": "2022-08-04T13:39:03.426Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e04b",
+    "name": "xrpusdt",
+    "base_unit": "xrp",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.768Z",
+    "updatedAt": "2022-08-04T13:39:03.768Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf70afe0ce3ce97e04d",
+    "name": "xlmusdt",
+    "base_unit": "xlm",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:03.775Z",
+    "updatedAt": "2022-08-04T13:39:03.775Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e017",
+    "name": "dogeusdt",
+    "base_unit": "doge",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:02.442Z",
+    "updatedAt": "2022-08-04T13:39:02.442Z",
+    "__v": 0
+  },
+  {
+    "_id": "62ebcbf60afe0ce3ce97e019",
+    "name": "bnbusdt",
+    "base_unit": "bnb",
+    "quote_unit": "usdt",
+    "createdAt": "2022-08-04T13:39:02.562Z",
+    "updatedAt": "2022-08-04T13:39:02.562Z",
+    "__v": 0
+  }
+]

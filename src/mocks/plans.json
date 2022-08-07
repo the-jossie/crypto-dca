@@ -14,7 +14,7 @@
       },
       "name": "Leaving the trenches.",
       "amount": 5,
-      "isActive": true,
+      "isActive": false,
       "schedule": "DAILY",
       "createdAt": "2022-08-04T14:06:52.487Z",
       "updatedAt": "2022-08-04T14:06:52.487Z",

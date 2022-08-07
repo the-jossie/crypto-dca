@@ -11,7 +11,7 @@ interface PropTypes {
 
 const Tabs = ({ activeTab = '', setActiveTab = () => {}, options = [] }: PropTypes) => {
   return (
-    <div className="PageTabs">
+    <div className="Tabs">
       {options.map((option, index) => (
         <span
           key={`page_tab-${index}`}

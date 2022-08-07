@@ -1,24 +1,23 @@
+import './table.scss';
+
 import { Fragment, ReactElement } from 'react';
-import CheckBox from '../check-box/check-box';
 import { CaretDownIcon } from '../vectors';
+import { tableHeadings } from '../../config';
+import { formatDate } from '../../utils';
 
 const Table = ({
-  headings = [],
+  name,
   tableData = [],
   id,
   rowActions = [],
   clickRow = () => {},
   clickRowAction = () => {},
   selected = [],
-  selectKey = '_id',
   onSelect = () => {},
+  isLoading = false,
 }: PropTypes) => {
   const tableId = `${id}-table`;
-
-  const toggleSelectAll = (value: boolean) => {
-    if (!value) onSelect(tableData.map((row: any) => row[selectKey]));
-    else onSelect([]);
-  };
+  const headings: any[] = tableHeadings[name];
 
   const toggleSelect = (id: number) => {
     if (selected.length !== tableData.length)
@@ -31,12 +30,9 @@ const Table = ({
         <table className="Table">
           <thead className="">
             <tr>
-              <th className="w-28">
-                <CheckBox
-                  onChange={(value: boolean) => toggleSelectAll(value)}
-                  value={selected.length === tableData.length ? true : false}
-                />
-              </th>
+              {/* <th className="w-28">
+                <p className="text-center">Status</p>
+              </th> */}
               {headings.map((heading, headingIndex) => (
                 <th key={`${tableId}-heading_${headingIndex}`}>
                   <div className={'flex items-center '}>
@@ -54,17 +50,14 @@ const Table = ({
                   onClick={() => clickRow(row._id || row.id || rowIndex)}
                   key={`${tableId}_row-${rowIndex}`}
                   className="h-5 relative">
-                  <td className="w-28">
-                    <CheckBox
-                      value={selected.includes(rowIndex) ? true : false}
-                      onChange={() => toggleSelect(rowIndex)}
-                    />
-                  </td>
+                  {/* <td className="w-28">
+                    <CheckBox value={row.isActive} onChange={() => toggleSelect(rowIndex)} />
+                  </td> */}
                   {headings.map((col, colIndex) => (
                     <td
                       key={`${tableId}_row_${rowIndex}_col-${colIndex}`}
                       className={`${col.customClass}  h-5`}>
-                      {row[col.key]}
+                      {col.key === 'createdAt' ? formatDate(row[col.key]) : row[col.key]}
                     </td>
                   ))}
                   {rowActions?.length ? (
@@ -89,7 +82,15 @@ const Table = ({
                 </tr>
               </Fragment>
             ))}
-            {!tableData.length && (
+            {isLoading ? (
+              <tr className="border-none mt-40">
+                <td colSpan={headings?.length + 1} className="py-6  text-center text-lp-grey2">
+                  <div className="flex flex-col items-center justify-center">
+                    <p className="text-xs lg:text-base">Loading...</p>
+                  </div>
+                </td>
+              </tr>
+            ) : !tableData.length ? (
               <tr className="border-none mt-40">
                 <td colSpan={headings?.length + 1} className="py-6  text-center text-lp-grey2">
                   <div className="flex flex-col items-center justify-center">
@@ -99,42 +100,40 @@ const Table = ({
                   </div>
                 </td>
               </tr>
-            )}
+            ) : null}
           </tbody>
         </table>
 
-        <div className="table-footer text-darkGrey text-opacity-50">
-          <div className="flex items-center space-x-1 cursor-pointer">
-            <div className="rotate-90">
-              <CaretDownIcon />
+        {!isLoading && (
+          <div className="table-footer text-darkGrey text-opacity-50">
+            <div className="flex items-center space-x-1 cursor-pointer">
+              <div className="rotate-90">
+                <CaretDownIcon />
+              </div>
+              <p>Previous</p>
             </div>
-            <p>Previous</p>
-          </div>
-          <div className="flex items-center space-x-2">
-            <p> Items per page:</p>
-            <div className="cursor-pointer flex items-center">
-              <p className="text-primary">10 Items</p>
-              <CaretDownIcon />
+            <div className="flex items-center space-x-2">
+              <p> Items per page:</p>
+              <div className="cursor-pointer flex items-center">
+                <p className="text-primary">10 Items</p>
+                <CaretDownIcon />
+              </div>
+            </div>
+            <div className="flex items-center space-x-1 cursor-pointer">
+              <p>Next</p>
+              <div className="-rotate-90">
+                <CaretDownIcon />
+              </div>
             </div>
           </div>
-          <div className="flex items-center space-x-1 cursor-pointer">
-            <p>Next</p>
-            <div className="-rotate-90">
-              <CaretDownIcon />
-            </div>
-          </div>
-        </div>
+        )}
       </div>
     </div>
   );
 };
 
 interface PropTypes {
-  headings: Array<{
-    name: string;
-    key: string;
-    customClass?: string;
-  }>;
+  name: string;
   tableData?: Array<Object>;
   id: string;
   clickRow?: Function;
@@ -146,6 +145,7 @@ interface PropTypes {
   selected?: Array<number>;
   onSelect?: Function;
   selectKey?: string;
+  isLoading?: boolean;
 }
 
 export { Table };

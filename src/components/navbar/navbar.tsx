@@ -6,7 +6,7 @@ import { CaretDownIcon, NotificationIcon } from '../vectors';
 
 const Navbar = () => {
   return (
-    <div className="HeaderNav">
+    <div className="Navbar">
       <h1 className="logo">
         DCA <span>CORE</span>
       </h1>

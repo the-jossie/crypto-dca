@@ -1,14 +1,9 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 import { AddPlanModal, Button, Search } from '../../components';
 import { AddIcon } from '../../components/vectors';
 
-interface PropTypes {
-  setTableData: Function;
-  tableData: any;
-}
-const PageHeader = ({ setTableData = () => {}, tableData = [] }: PropTypes) => {
+const PageHeader = () => {
   type modalTypes = 'add';
   const [modal, setModal] = useState<{ type: modalTypes; open: boolean }>({
     type: 'add',
@@ -17,12 +12,12 @@ const PageHeader = ({ setTableData = () => {}, tableData = [] }: PropTypes) => {
   return (
     <>
       <div className="PageHeader">
-        <h1>My Plans</h1>
+        <h1>My DCA </h1>
 
         <div className="actions">
-          <Search placeholder="Search for a site..." />
+          <Search placeholder="Search..." />
           <Button
-            text="Add New Site"
+            text="Create New Plan"
             iconPosition="left"
             onClick={() => setModal({ type: 'add', open: true })}>
             <AddIcon />
@@ -31,11 +26,7 @@ const PageHeader = ({ setTableData = () => {}, tableData = [] }: PropTypes) => {
       </div>
 
       {modal.type === 'add' && modal.open && (
-        <AddPlanModal
-          {...{ tableData }}
-          {...{ setTableData }}
-          close={() => setModal({ ...modal, open: false })}
-        />
+        <AddPlanModal onClose={() => setModal({ ...modal, open: false })} />
       )}
     </>
   );
