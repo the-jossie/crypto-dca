@@ -1,10 +1,13 @@
 import './navbar.scss';
 
-import React from 'react';
+import { useContext } from 'react';
 
 import { CaretDownIcon, NotificationIcon } from '../vectors';
+import { UserContext } from '../../contexts';
 
 const Navbar = () => {
+  const { user }: any = useContext(UserContext);
+
   return (
     <div className="Navbar">
       <h1 className="logo">
@@ -12,10 +15,12 @@ const Navbar = () => {
       </h1>
 
       <div className="info-side">
-        <NotificationIcon />
-        <div className="avatar-box">UN</div>
-        <p className="user-name">User...name</p>
-        <CaretDownIcon />
+        <NotificationIcon className="cursor-pointer" />
+        <div className="avatar-box">{user?.name?.slice(0, 1)}</div>
+        <div className="flex items-center cursor-pointer">
+          <p className="user-name">{user?.name}</p>
+          <CaretDownIcon />
+        </div>
       </div>
     </div>
   );

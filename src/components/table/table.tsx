@@ -12,27 +12,17 @@ const Table = ({
   rowActions = [],
   clickRow = () => {},
   clickRowAction = () => {},
-  selected = [],
-  onSelect = () => {},
   isLoading = false,
 }: PropTypes) => {
   const tableId = `${id}-table`;
   const headings: any[] = tableHeadings[name];
 
-  const toggleSelect = (id: number) => {
-    if (selected.length !== tableData.length)
-      onSelect(tableData.map((row: any, rowIndex) => rowIndex));
-    else onSelect([]);
-  };
   return (
     <div className="w-full p-8 bg-white pb-0 flex-grow h-full overflow-y-auto flex flex-col">
       <div className="flex-grow overflow-y-hidden flex flex-col">
         <table className="Table">
           <thead className="">
             <tr>
-              {/* <th className="w-28">
-                <p className="text-center">Status</p>
-              </th> */}
               {headings.map((heading, headingIndex) => (
                 <th key={`${tableId}-heading_${headingIndex}`}>
                   <div className={'flex items-center '}>
@@ -50,9 +40,6 @@ const Table = ({
                   onClick={() => clickRow(row._id || row.id || rowIndex)}
                   key={`${tableId}_row-${rowIndex}`}
                   className="h-5 relative">
-                  {/* <td className="w-28">
-                    <CheckBox value={row.isActive} onChange={() => toggleSelect(rowIndex)} />
-                  </td> */}
                   {headings.map((col, colIndex) => (
                     <td
                       key={`${tableId}_row_${rowIndex}_col-${colIndex}`}
@@ -103,30 +90,6 @@ const Table = ({
             ) : null}
           </tbody>
         </table>
-
-        {!isLoading && (
-          <div className="table-footer text-darkGrey text-opacity-50">
-            <div className="flex items-center space-x-1 cursor-pointer">
-              <div className="rotate-90">
-                <CaretDownIcon />
-              </div>
-              <p>Previous</p>
-            </div>
-            <div className="flex items-center space-x-2">
-              <p> Items per page:</p>
-              <div className="cursor-pointer flex items-center">
-                <p className="text-primary">10 Items</p>
-                <CaretDownIcon />
-              </div>
-            </div>
-            <div className="flex items-center space-x-1 cursor-pointer">
-              <p>Next</p>
-              <div className="-rotate-90">
-                <CaretDownIcon />
-              </div>
-            </div>
-          </div>
-        )}
       </div>
     </div>
   );
@@ -142,9 +105,6 @@ interface PropTypes {
     element: ReactElement | ((row: any) => ReactElement);
     key: string;
   }[];
-  selected?: Array<number>;
-  onSelect?: Function;
-  selectKey?: string;
   isLoading?: boolean;
 }
 

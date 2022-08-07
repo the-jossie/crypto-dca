@@ -11,4 +11,12 @@ const createPlan = async (body: Object) => {
   return data;
 };
 
-export { createPlan, fetchPlans };
+const editPlan = async (body: any) => {
+  const id = body.id;
+  delete body.id;
+
+  const { data } = await axiosInstance.put(`plan/edit_plan/${id}`, body);
+  return data;
+};
+
+export { createPlan, editPlan, fetchPlans };

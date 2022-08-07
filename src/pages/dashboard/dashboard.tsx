@@ -28,4 +28,5 @@ const DashboardPage = () => {
     </div>
   );
 };
+
 export { DashboardPage };

@@ -1,5 +1,5 @@
 export * from './authenticate';
 export * from './markets';
-export * from './plans';
+export * from './plan';
 export * from './sync';
 export * from './transactions';

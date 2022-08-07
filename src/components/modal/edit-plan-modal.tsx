@@ -1,68 +1,79 @@
+import { useMutation } from '@tanstack/react-query';
 import PropTypes from 'prop-types';
-import { FormEvent, useEffect, useState } from 'react';
+import { FormEvent, useState } from 'react';
+import { toast } from 'react-toastify';
 
-import { Button, Input, Modal } from '..';
-import { AttachmentIcon, TickIcon } from '../vectors';
+import { editPlan } from '../../api';
+import { queryClient } from '../../config';
+
+import { Button, Dropdown, Input, Modal } from '..';
 
 interface PropTypes {
-  site: any;
-  close: Function;
-  tableData: any;
+  onClose: Function;
+  plan: any;
 }
-const EditPlanModal = ({ close = () => {}, tableData = [], site }: PropTypes) => {
+const EditPlanModal = ({ onClose = () => {}, plan }: PropTypes) => {
+  const scheduleOptions = [
+    { name: 'DAILY', value: 'DAILY' },
+    { name: 'WEEKLY', value: 'WEEKLY' },
+    { name: 'MONTHLY', value: 'MONTHLY' },
+  ];
+
   const [form, setForm] = useState({
-    siteName: '',
-    admin: 'Buyer name',
-    creation: '02/05/2021 5:29pm',
-    _id: Math.random().toString(),
+    id: plan._id,
+    name: plan.name ?? '',
+    schedule: plan.schedule || '',
   });
-  const updateField = (field: 'siteName', value: string) => {
+  const updateField = (field: string, value: string) => {
     setForm({
       ...form,
       [field]: value,
     });
   };
-  const onSubmit = (e: FormEvent) => {
+
+  const { isLoading, mutateAsync } = useMutation(editPlan, {
+    onSuccess() {
+      toast.success('DCA Plan updated');
+      queryClient.invalidateQueries(['plans']);
+      onClose();
+    },
+    onError(error) {
+      toast.error(error?.response?.data?.data?.message ?? 'An error occured.\n Please try again!');
+    },
+  });
+
+  const onSubmit = async (e: FormEvent) => {
     e.preventDefault();
-    const updatedList = tableData.map((data) =>
-      data._id === site._id ? { ...data, siteName: form.siteName } : data
-    );
-    close();
+
+    await mutateAsync(form);
   };
 
-  useEffect(() => {
-    updateField('siteName', site.siteName);
-  }, []);
   return (
-    <Modal close={close}>
+    <Modal close={onClose}>
       <div className="mt-3">
         <div>
-          <h3 className="font-semibold text-2xl text-dark mb-8">Edit Site</h3>
+          <h3 className="font-semibold text-2xl text-dark mb-8">Edit DCA Plan</h3>
           <form className="space-y-6" onSubmit={onSubmit}>
             <Input
-              label="Site Name"
-              value={form.siteName}
-              onChange={(e: any) => updateField('siteName', e.target.value)}
+              label="Plan Name"
+              value={form.name}
+              onChange={(value: string) => updateField('name', value)}
             />
-            <Input label="Description" />
-            <div>
-              <p className="text-dark text-opacity-[72%] mb-4">Upload your site logo</p>
-              <div className="flex items-center justify-between">
-                <div className="flex items-center space-x-4">
-                  <AttachmentIcon />
-                  <p className="text-dark text-opacity-[72%]">Required_File.png</p>
-                </div>
-                <TickIcon />
-              </div>
-            </div>
+            <Dropdown
+              options={scheduleOptions}
+              label="Schedule"
+              value={form.schedule}
+              onChange={(value: string) => updateField('schedule', value)}
+            />
+
             <div className="flex items-center justify-between pt-14 space-x-6">
               <Button
                 text="Cancel"
-                size="small"
                 customClasses="text-dark text-opacity-[52%] bg-grey2 border-none"
-                onClick={close}
+                type="button"
+                onClick={onClose}
               />
-              <Button text="Save Changes" size="small" />
+              <Button text="Edit" loading={isLoading} type="submit" />
             </div>
           </form>
         </div>

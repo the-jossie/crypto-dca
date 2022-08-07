@@ -9,6 +9,7 @@ const PageHeader = () => {
     type: 'add',
     open: false,
   });
+
   return (
     <>
       <div className="PageHeader">
