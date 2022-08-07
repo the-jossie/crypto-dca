@@ -19,4 +19,12 @@ const editPlan = async (body: any) => {
   return data;
 };
 
-export { createPlan, editPlan, fetchPlans };
+const togglePlan = async (body: any) => {
+  const id = body.id;
+  delete body.id;
+
+  const { data } = await axiosInstance.patch(`plan/toggle_plan/${id}`, body);
+  return data;
+};
+
+export { createPlan, editPlan, fetchPlans, togglePlan };

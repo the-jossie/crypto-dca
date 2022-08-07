@@ -62,8 +62,7 @@ const authenticate = (config: AxiosRequestConfig<any>) => {
           user: {
             name: 'Oye Olalekan',
             email: 'johnsonoye123@gmail.com',
-            token:
-              'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZWFmZDE0YTBlNjIxOGRmOGYyM2YzOCIsImlhdCI6MTY1OTgxMjY5NiwiZXhwIjoxNjYyNDA0Njk2fQ.nWWMWABCkCM4qLzMgxBGIpEH9FBqK55YU76KLx-c38E',
+            token: testToken,
           },
         },
       },
