@@ -1,7 +1,8 @@
 import { format } from 'date-fns';
 
 const formatDate = (date: string): string => {
-  return format(new Date(date), 'dd-MM-yyyy');
+  const dateObj = new Date(date);
+  return format(dateObj, "hh:mm aaaaa'm', dd-MM-yyyy");
 };
 
 export { formatDate };

@@ -30,7 +30,7 @@ const Table = ({
                   </div>
                 </th>
               ))}
-              {rowActions?.length ? <th>Actions</th> : null}
+              {rowActions?.length ? <th></th> : null}
             </tr>
           </thead>
           <tbody>
@@ -43,7 +43,7 @@ const Table = ({
                   {headings.map((col, colIndex) => (
                     <td
                       key={`${tableId}_row_${rowIndex}_col-${colIndex}`}
-                      className={`${col.customClass}  h-5`}>
+                      className={`${col.customClass}  h-5 `}>
                       {col.key === 'createdAt' ? formatDate(row[col.key]) : row[col.key]}
                     </td>
                   ))}
