@@ -17,7 +17,7 @@ const Table = ({
   const headings: any[] = tableHeadings[name];
 
   return (
-    <div className="w-full p-8 bg-white pb-0 flex-grow h-full overflow-y-auto flex flex-col">
+    <div className="w-full lg:p-8 bg-white pb-0 flex-grow h-full overflow-y-auto flex flex-col">
       <div className="flex-grow overflow-y-hidden flex flex-col">
         <table className="Table">
           <thead className="">
@@ -47,7 +47,7 @@ const Table = ({
                     </td>
                   ))}
                   {rowActions?.length ? (
-                    <td className="flex flex-shrink items-center space-x-6">
+                    <td className="flex flex-shrink items-center space-x-6 h-full">
                       {rowActions.map((action, actionIndex) => (
                         <div
                           className="cursor-pointer h-10 flex items-center justify-center"
@@ -61,11 +61,11 @@ const Table = ({
                     </td>
                   ) : null}
                 </tr>
-                <tr className="lg:hidden border-none !p-0">
+                {/* <tr className="lg:hidden border-none !p-0">
                   <td colSpan={headings?.length + 1} className="!p-0 !m-0">
                     <hr />
                   </td>
-                </tr>
+                </tr> */}
               </Fragment>
             ))}
             {isLoading ? (

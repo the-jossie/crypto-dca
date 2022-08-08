@@ -1,6 +1,9 @@
 table.Table {
   @apply flex-grow overflow-y-hidden w-full h-full grid grid-rows-[auto,1fr];
   border-spacing: 0;
+  ::-webkit-scrollbar {
+    display: none;
+  }
 
   thead {
     @apply bg-grey2 rounded-lg w-full;
@@ -12,7 +15,7 @@ table.Table {
 
   td,
   th {
-    @apply lg:min-w-[5rem] text-xs lg:text-base;
+    @apply md:min-w-[5rem] w-[6rem] md:w-[20%] text-xs lg:text-base break-words;
     padding: 15px 6px;
     text-align: left;
   }

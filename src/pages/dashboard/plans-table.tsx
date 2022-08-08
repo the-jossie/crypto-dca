@@ -1,7 +1,5 @@
 import 'react-toggle/style.css';
 
-import { useState } from 'react';
-
 import { EditPlanModal, PageHeader, Tabs, Table } from '../../components';
 
 import { usePlans } from '../../hooks/plans';
@@ -9,7 +7,6 @@ import { TransactionsTable } from './transactions-table';
 
 const PlansTable = () => {
   const tabs = ['My Plans'];
-  const [activeTab, setActiveTab] = useState(tabs[0]);
 
   const {
     isLoading,
@@ -40,7 +37,6 @@ const PlansTable = () => {
       ) : (
         <>
           <PageHeader title="My DCA Plans" showSearch={true} showBtn={true} />
-          <Tabs options={tabs} {...{ activeTab }} {...{ setActiveTab }} />
           <Table
             name="plans"
             isLoading={isLoading}

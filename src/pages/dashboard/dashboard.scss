@@ -2,6 +2,6 @@
   @apply relative h-screen w-screen overflow-hidden flex flex-col;
 
   .PageSection {
-    @apply px-[52px] py-[38px] flex-grow flex flex-col overflow-hidden;
+    @apply px-4 lg:px-[52px] py-[38px] flex-grow flex flex-col overflow-hidden;
   }
 }

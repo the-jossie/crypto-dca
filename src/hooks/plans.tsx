@@ -49,7 +49,6 @@ const usePlans = () => {
 
     if (action === 'view') {
       setShowTransactions(true);
-      // window.location.replace(`/transactions/${selected._id}`);
     }
   };
 
