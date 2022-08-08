@@ -14,7 +14,7 @@ interface PropTypes {
 const Modal = ({ close = () => {}, children, width, showCloseBtn = true }: PropTypes) => {
   return (
     <div className="Modal">
-      <div className="-mt-40 space-y-2">
+      <div className="-mt-32 md:-mt-40 space-y-2">
         {showCloseBtn && (
           <div onClick={() => close()} className="flex justify-end cursor-pointer">
             <CloseIcon />

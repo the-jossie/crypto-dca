@@ -1,6 +1,6 @@
 .Modal {
   @apply fixed z-50 w-full h-full flex flex-col justify-center items-center inset-0 backdrop-blur-sm bg-dark bg-opacity-[52%];
   .inner {
-    @apply w-[25rem];
+    @apply w-[100%] lg:w-[25rem];
   }
 }

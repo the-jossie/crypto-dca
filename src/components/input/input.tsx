@@ -63,7 +63,7 @@ const Input = ({
               value={value}
               className={`${
                 full ? 'w-full' : 'max-w-full lg:w-[18.5rem]'
-              } outline-none h-10 lg:h-12 flex items-center pl-4 border rounded text-base font-normal ${
+              } outline-none h-10 lg:h-12 flex items-center pl-1 lg:pl-4 border rounded text-base font-normal ${
                 error
                   ? 'border-red-400 focus:border-red-400 text-red-400 '
                   : ' border-[#DDE2E5] focus:border-[#138EFF]'
