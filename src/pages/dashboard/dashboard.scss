@@ -3,17 +3,5 @@
 
   .PageSection {
     @apply px-[52px] py-[38px] flex-grow flex flex-col overflow-hidden;
-
-    .PageHeader {
-      @apply flex items-center justify-between mb-8;
-
-      h1 {
-        @apply text-[32px] text-dark font-medium;
-      }
-
-      .actions {
-        @apply flex items-center space-x-[3.25rem];
-      }
-    }
   }
 }

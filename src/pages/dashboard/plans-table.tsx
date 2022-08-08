@@ -1,75 +1,77 @@
 import 'react-toggle/style.css';
-import { useState } from 'react';
-import { useMutation, useQuery } from '@tanstack/react-query';
-import Toggle from 'react-toggle';
 
-import { fetchPlans, togglePlan } from '../../api';
-import { EditPlanModal, Table } from '../../components';
-import { queryClient } from '../../config';
-import { toast } from 'react-toastify';
+import { useState } from 'react';
+
+import { EditPlanModal, PageHeader, Tabs, Table } from '../../components';
+
+import { usePlans } from '../../hooks/plans';
+import { TransactionsTable } from './transactions-table';
 
 const PlansTable = () => {
-  const { isLoading, data } = useQuery(['plans'], fetchPlans);
-  const formattedData = data?.plans?.map((plan: any) => ({
-    ...plan,
-    amount: `${plan?.market?.quote_unit.toUpperCase()} ${plan?.amount}`,
-    toggle: (
-      <Toggle
-        key={plan?._id}
-        defaultChecked={plan?.isActive}
-        onChange={async () => await mutateAsync({ id: plan._id, isActive: !plan.isActive })}
-      />
-    ),
-  }));
+  const tabs = ['My Plans'];
+  const [activeTab, setActiveTab] = useState(tabs[0]);
 
-  const [selectedRow, setSelectedRow] = useState(null);
-  type modalTypes = 'delete' | 'edit';
-  const [modal, setModal] = useState<{ type: modalTypes; open: boolean }>({
-    type: 'edit',
-    open: false,
-  });
-
-  const { mutateAsync } = useMutation(togglePlan, {
-    onSuccess(data) {
-      toast.success(data?.message);
-
-      queryClient.invalidateQueries(['plans']);
-    },
-    onError(error) {
-      toast.error(error?.response?.data?.data?.message ?? 'An error occured.\n Please try again!');
-    },
-  });
-
-  const handleRowClick = async (id: string, action: string) => {
-    const selected = data?.plans?.find((data: any) => data._id === id);
-    setSelectedRow(selected);
-
-    if (action === 'edit') {
-      setModal({ type: 'edit', open: true });
-    }
-  };
+  const {
+    isLoading,
+    plans,
+    handleRowClick,
+    modal,
+    setModal,
+    selectedRow,
+    showTransactions,
+    setShowTransactions,
+  } = usePlans();
 
   return (
     <>
-      <Table
-        name="plans"
-        isLoading={isLoading}
-        tableData={formattedData ?? []}
-        clickRowAction={handleRowClick}
-        rowActions={[
-          {
-            key: 'edit',
-            element: (
-              <button
-                type="button"
-                className="bg-[#ffffff] border border-primary text-primary py-2 px-6 rounded">
-                Edit
-              </button>
-            ),
-          },
-        ]}
-        id="My-Plans"
-      />
+      {showTransactions ? (
+        <>
+          <h1 className="font-medium text-xl mb-10">
+            <span
+              className="cursor-pointer text-primary font-bold text-2xl"
+              onClick={() => setShowTransactions(false)}>
+              Plans
+            </span>{' '}
+            / <span className="text-xl">{selectedRow?.name}</span> /{' '}
+            <span className="text-lg">Transactions</span>
+          </h1>
+          <TransactionsTable id={selectedRow?._id} />
+        </>
+      ) : (
+        <>
+          <PageHeader title="My DCA Plans" showSearch={true} showBtn={true} />
+          <Tabs options={tabs} {...{ activeTab }} {...{ setActiveTab }} />
+          <Table
+            name="plans"
+            isLoading={isLoading}
+            tableData={plans ?? []}
+            clickRowAction={handleRowClick}
+            rowActions={[
+              {
+                key: 'view',
+                element: (
+                  <button
+                    type="button"
+                    className="bg-[#ffffff] border border-dark  border-opacity-[50%] text-dark text-opacity-[50%] py-2 px-6 rounded">
+                    View
+                  </button>
+                ),
+              },
+              {
+                key: 'edit',
+                element: (
+                  <button
+                    type="button"
+                    className="bg-[#ffffff] border border-primary text-primary py-2 px-6 rounded">
+                    Edit
+                  </button>
+                ),
+              },
+            ]}
+            id="My-Plans"
+          />
+        </>
+      )}
       {modal.type === 'edit' && modal.open && (
         <EditPlanModal onClose={() => setModal({ ...modal, open: false })} plan={selectedRow} />
       )}

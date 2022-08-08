@@ -1,7 +1,6 @@
 import './table.scss';
 
 import { Fragment, ReactElement } from 'react';
-import { CaretDownIcon } from '../vectors';
 import { tableHeadings } from '../../config';
 import { formatDate } from '../../utils';
 
@@ -81,9 +80,7 @@ const Table = ({
               <tr className="border-none mt-40">
                 <td colSpan={headings?.length + 1} className="py-6  text-center text-lp-grey2">
                   <div className="flex flex-col items-center justify-center">
-                    <p className="text-xs lg:text-base">
-                      All plans created would be displayed here
-                    </p>
+                    <p className="text-xs lg:text-base">No {name} available</p>
                   </div>
                 </td>
               </tr>

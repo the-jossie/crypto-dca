@@ -1,5 +1,6 @@
 export * from './AddIcon';
 export * from './AttachmentIcon';
+export * from './BackIcon';
 export * from './BinIcon';
 export * from './CaretDownIcon';
 export * from './CloseIcon';

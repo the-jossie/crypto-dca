@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
 
-import { fetchTransactions } from '../../api';
 import { Table } from '../../components';
+import { fetchTransactions } from '../../api';
 
-const TransactionsTable = () => {
-  const { isLoading, data } = useQuery(['transactions'], fetchTransactions);
+const TransactionsTable = ({ id }: IProps) => {
+  const { isLoading, data } = useQuery(['transactions'], () => fetchTransactions(id));
 
   const formattedData = data?.transactions?.map((transaction: any) => ({
     ...transaction,
@@ -22,5 +22,9 @@ const TransactionsTable = () => {
     />
   );
 };
+
+interface IProps {
+  id: string;
+}
 
 export { TransactionsTable };

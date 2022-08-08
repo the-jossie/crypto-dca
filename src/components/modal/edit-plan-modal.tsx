@@ -1,10 +1,6 @@
-import { useMutation } from '@tanstack/react-query';
 import PropTypes from 'prop-types';
-import { FormEvent, useState } from 'react';
-import { toast } from 'react-toastify';
 
-import { editPlan } from '../../api';
-import { queryClient } from '../../config';
+import { useEditPlan } from '../../hooks/edit-plan';
 
 import { Button, Dropdown, Input, Modal } from '..';
 
@@ -13,40 +9,7 @@ interface PropTypes {
   plan: any;
 }
 const EditPlanModal = ({ onClose = () => {}, plan }: PropTypes) => {
-  const scheduleOptions = [
-    { name: 'DAILY', value: 'DAILY' },
-    { name: 'WEEKLY', value: 'WEEKLY' },
-    { name: 'MONTHLY', value: 'MONTHLY' },
-  ];
-
-  const [form, setForm] = useState({
-    id: plan._id,
-    name: plan.name ?? '',
-    schedule: plan.schedule || '',
-  });
-  const updateField = (field: string, value: string) => {
-    setForm({
-      ...form,
-      [field]: value,
-    });
-  };
-
-  const { isLoading, mutateAsync } = useMutation(editPlan, {
-    onSuccess() {
-      toast.success('DCA Plan updated');
-      queryClient.invalidateQueries(['plans']);
-      onClose();
-    },
-    onError(error) {
-      toast.error(error?.response?.data?.data?.message ?? 'An error occured.\n Please try again!');
-    },
-  });
-
-  const onSubmit = async (e: FormEvent) => {
-    e.preventDefault();
-
-    await mutateAsync(form);
-  };
+  const { onSubmit, form, updateField, scheduleOptions, isLoading } = useEditPlan(plan, onClose);
 
   return (
     <Modal close={onClose}>

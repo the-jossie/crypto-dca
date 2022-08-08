@@ -4,6 +4,7 @@ export * from './dropdown';
 export * from './input';
 export * from './modal';
 export * from './navbar';
+export * from './page-header';
 export * from './search';
 export * from './tabs';
 export * from './table';
