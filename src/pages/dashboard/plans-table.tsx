@@ -38,7 +38,7 @@ const PlansTable = () => {
       ) : (
         <>
           <PageHeader
-            title="My DCA Plans"
+            title="My Plans"
             handleSearch={handleSearch}
             showSearch={true}
             showBtn={true}

@@ -8,6 +8,7 @@ type IUSERCONTEXT = {
   user: any;
   setUser: Function;
   userAccountIsSynced: boolean;
+  setUserAccountIsSynced: Function;
 } | null;
 
 const UserContext = createContext<IUSERCONTEXT>(null);
@@ -27,7 +28,7 @@ const UserProvider = ({ children }: IProps) => {
   }, [store]);
 
   return (
-    <UserContext.Provider value={{ user, setUser, userAccountIsSynced }}>
+    <UserContext.Provider value={{ user, setUser, userAccountIsSynced, setUserAccountIsSynced }}>
       {children}
     </UserContext.Provider>
   );

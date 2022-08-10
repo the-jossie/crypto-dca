@@ -15,11 +15,9 @@ const Navbar = () => {
       </h1>
 
       <div className="info-side">
-        <NotificationIcon className="cursor-pointer" />
         <div className="avatar-box">{user?.name?.slice(0, 1)}</div>
         <div className="flex items-center cursor-pointer">
           <p className="user-name">{user?.name}</p>
-          <CaretDownIcon />
         </div>
       </div>
     </div>

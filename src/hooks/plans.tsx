@@ -33,11 +33,9 @@ const usePlans = () => {
     if (value.trim() === '') {
       setPlans(formatPlans(data));
     } else {
-      console.log('first', value);
       const filteredPlans = formatPlans(data)?.filter((plan: any) =>
         plan.name.toLowerCase().includes(value.toLowerCase())
       );
-      console.log('second', filteredPlans);
 
       setPlans([...filteredPlans]);
     }

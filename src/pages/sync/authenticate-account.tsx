@@ -4,13 +4,13 @@ import { useMutation } from '@tanstack/react-query';
 
 import { authenticate } from '../../api';
 import { Button, Input } from '../../components';
-import { APP_NAME } from '../../config';
+import { APP_NAME, queryClient } from '../../config';
 import { UserContext } from '../../contexts';
 import { useSessionStorage } from '../../hooks/session';
 
 const AuthenticateAccount = () => {
   const [, setToken] = useSessionStorage(APP_NAME);
-  const { setUser } = useContext(UserContext);
+  const { setUser, setUserAccountIsSynced } = useContext(UserContext);
   const [code, setCode] = useState('');
 
   const { isLoading, mutateAsync } = useMutation(authenticate, {
@@ -21,9 +21,8 @@ const AuthenticateAccount = () => {
       });
       const { token } = user;
       setToken({ token, userData: user });
-      if (user) {
-        setUser(user);
-      }
+      setUser(user);
+      setUserAccountIsSynced(true);
       setTimeout(() => {
         window.location.reload();
       }, 1000);

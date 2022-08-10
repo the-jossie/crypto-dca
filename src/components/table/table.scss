@@ -1,8 +1,10 @@
 table.Table {
   @apply flex-grow overflow-y-hidden w-full h-full grid grid-rows-[auto,1fr];
   border-spacing: 0;
-  ::-webkit-scrollbar {
-    display: none;
+  @media only screen and (max-width: 600px) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
   }
 
   thead {
