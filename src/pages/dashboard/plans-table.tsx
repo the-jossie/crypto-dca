@@ -17,6 +17,7 @@ const PlansTable = () => {
     selectedRow,
     showTransactions,
     setShowTransactions,
+    handleSearch,
   } = usePlans();
 
   return (
@@ -36,7 +37,12 @@ const PlansTable = () => {
         </>
       ) : (
         <>
-          <PageHeader title="My DCA Plans" showSearch={true} showBtn={true} />
+          <PageHeader
+            title="My DCA Plans"
+            handleSearch={handleSearch}
+            showSearch={true}
+            showBtn={true}
+          />
           <Table
             name="plans"
             isLoading={isLoading}

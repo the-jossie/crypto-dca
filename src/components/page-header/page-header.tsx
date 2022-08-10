@@ -5,17 +5,29 @@ import { AddPlanModal, Button, Search } from '../../components';
 import { AddIcon } from '../../components/vectors';
 
 interface IProps {
-  title: string;
+  handleSearch?: Function;
   showSearch?: boolean;
   showBtn?: boolean;
+  title: string;
 }
 
-const PageHeader = ({ showSearch = false, title, showBtn = false }: IProps) => {
+const PageHeader = ({
+  handleSearch = () => {},
+  showSearch = false,
+  title,
+  showBtn = false,
+}: IProps) => {
   type modalTypes = 'add';
   const [modal, setModal] = useState<{ type: modalTypes; open: boolean }>({
     type: 'add',
     open: false,
   });
+
+  const [search, setSearch] = useState<string>('');
+
+  const triggerSearch = (value = search) => {
+    handleSearch(value);
+  };
 
   return (
     <>
@@ -23,7 +35,17 @@ const PageHeader = ({ showSearch = false, title, showBtn = false }: IProps) => {
         <h1>{title}</h1>
 
         <div className="actions">
-          {showSearch && <Search placeholder="Search..." />}
+          {showSearch && (
+            <Search
+              value={search}
+              onChange={(value: string) => {
+                setSearch(value);
+                triggerSearch(value);
+              }}
+              triggerSearch={triggerSearch}
+              placeholder="Search..."
+            />
+          )}
           {showBtn && (
             <Button
               text="Create New Plan"

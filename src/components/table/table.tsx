@@ -43,7 +43,9 @@ const Table = ({
                     <td
                       key={`${tableId}_row_${rowIndex}_col-${colIndex}`}
                       className={`${col.customClass}  h-5 `}>
-                      {col.key === 'createdAt' ? formatDate(row[col.key]) : row[col.key]}
+                      <div className="flex items-center ">
+                        {col.key === 'createdAt' ? formatDate(row[col.key]) : row[col.key]}
+                      </div>
                     </td>
                   ))}
                   {rowActions?.length ? (
