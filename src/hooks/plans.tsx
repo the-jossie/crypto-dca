@@ -31,13 +31,15 @@ const usePlans = () => {
 
   const handleSearch = (value: string) => {
     if (value.trim() === '') {
-      formatPlans(data);
+      setPlans(formatPlans(data));
     } else {
-      const filteredPlans = plans.filter((plan) =>
+      console.log('first', value);
+      const filteredPlans = formatPlans(data)?.filter((plan: any) =>
         plan.name.toLowerCase().includes(value.toLowerCase())
       );
+      console.log('second', filteredPlans);
 
-      setPlans(filteredPlans);
+      setPlans([...filteredPlans]);
     }
   };
 
