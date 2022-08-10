@@ -71,7 +71,7 @@ const Table = ({
             {isLoading ? (
               <tr className="border-none mt-40">
                 <td colSpan={headings?.length + 1} className="py-6  text-center text-lp-grey2">
-                  <div className="flex flex-col items-center justify-center">
+                  <div className="flex flex-col ml-16 md:ml-0 md:items-center justify-center">
                     <p className="text-xs lg:text-base">Loading...</p>
                   </div>
                 </td>
@@ -79,7 +79,7 @@ const Table = ({
             ) : !tableData.length ? (
               <tr className="border-none mt-40">
                 <td colSpan={headings?.length + 1} className="py-6  text-center text-lp-grey2">
-                  <div className="flex flex-col items-center justify-center">
+                  <div className="flex flex-col ml-16 md:ml-0 md:items-center justify-center">
                     <p className="text-xs lg:text-base">No {name} available</p>
                   </div>
                 </td>

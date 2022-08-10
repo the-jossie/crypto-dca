@@ -25,6 +25,12 @@ const Modal = ({ close = () => {}, children, width, showCloseBtn = true }: PropT
             width ? width : 'w-[25rem]'
           }`}>
           <div className="p-8">{children && children}</div>
+          <div className="flex items-center justify-center mt-8 mb-4">
+            Proudly powered by{' '}
+            <a href="https://quidax.com" target="_blank" className="flex items-center">
+              <img src="/images/quidax.webp" className="w-4 h-4 mx-1" /> quidax
+            </a>
+          </div>
         </div>
       </div>
     </div>
