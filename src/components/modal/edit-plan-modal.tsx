@@ -32,7 +32,7 @@ const EditPlanModal = ({ onClose = () => {}, plan }: PropTypes) => {
             <div className="flex flex-col md:flex-row justify-between pt-4 md:pt-14 md:space-x-6">
               <Button
                 text="Cancel"
-                customClasses="text-dark text-opacity-[52%] bg-grey2 border-none order-2 md:order-1 mt-4 md:mt-0"
+                customClasses="text-dark text-opacity-[52%] bg-grey2 border-none order-2 md:order-none mt-4 md:mt-0"
                 type="button"
                 onClick={onClose}
               />

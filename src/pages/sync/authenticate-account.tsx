@@ -22,7 +22,7 @@ const AuthenticateAccount = () => {
       const { token } = user;
       setToken({ token, userData: user });
       setUser(user);
-      setUserAccountIsSynced(true);
+      // setUserAccountIsSynced(true);
       setTimeout(() => {
         window.location.reload();
       }, 1000);
