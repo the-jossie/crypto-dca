@@ -1,8 +1,13 @@
 import { axiosInstance } from '../config';
 
-const fetchTransactions = async (id: string | undefined) => {
+const fetchPlanTransactions = async (id: string | undefined) => {
   const { data } = await axiosInstance.get(`transaction/transactions/${id}`);
   return data;
 };
 
-export { fetchTransactions };
+const fetchAllTransactions = async () => {
+  const { data } = await axiosInstance.get(`transaction`);
+  return data;
+};
+
+export { fetchAllTransactions, fetchPlanTransactions };

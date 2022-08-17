@@ -22,6 +22,11 @@ const EditPlanModal = ({ onClose = () => {}, plan }: PropTypes) => {
               value={form.name}
               onChange={(value: string) => updateField('name', value)}
             />
+            <Input
+              label="Amount"
+              value={form.amount}
+              onChange={(value: string) => updateField('amount', value)}
+            />
             <Dropdown
               options={scheduleOptions}
               label="Schedule"

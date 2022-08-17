@@ -1,13 +1,11 @@
 import 'react-toggle/style.css';
 
-import { EditPlanModal, PageHeader, Tabs, Table } from '../../components';
+import { EditPlanModal, Table } from '../../components';
 
 import { usePlans } from '../../hooks/plans';
 import { TransactionsTable } from './transactions-table';
 
 const PlansTable = () => {
-  const tabs = ['My Plans'];
-
   const {
     isLoading,
     plans,
@@ -37,12 +35,6 @@ const PlansTable = () => {
         </>
       ) : (
         <>
-          <PageHeader
-            title="My Plans"
-            handleSearch={handleSearch}
-            showSearch={true}
-            showBtn={true}
-          />
           <Table
             name="plans"
             isLoading={isLoading}

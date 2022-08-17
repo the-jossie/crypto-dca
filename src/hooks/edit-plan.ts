@@ -17,6 +17,7 @@ const useEditPlan = (plan: any, onComplete: Function) => {
     id: plan._id,
     name: plan.name ?? '',
     schedule: plan.schedule || '',
+    amount: plan.amount || '',
   });
   const updateField = (field: string, value: string) => {
     setForm({
