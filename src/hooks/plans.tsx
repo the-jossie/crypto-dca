@@ -58,6 +58,7 @@ const usePlans = () => {
     data?.plans?.map((plan: any) => ({
       ...plan,
       amount: `${plan?.market?.quote_unit.toUpperCase()} ${plan?.amount}`,
+      asset: plan?.market?.base_unit?.toUpperCase(),
       toggle: (
         <Toggle
           key={plan?._id}

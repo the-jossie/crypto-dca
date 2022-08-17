@@ -1,6 +1,7 @@
 const PLANS_TABLE_HEADINGS = [
   { name: 'Amount', key: 'amount' },
   { name: 'Name', key: 'name' },
+  { name: 'Asset', key: 'asset' },
   { name: 'Schedule', key: 'schedule' },
   { name: 'Creation Date & Time', key: 'createdAt' },
   { name: '', key: 'toggle', customClass: '!w-20' },
