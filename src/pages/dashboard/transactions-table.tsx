@@ -2,6 +2,7 @@ import { useQuery } from '@tanstack/react-query';
 
 import { Table } from '../../components';
 import { fetchAllTransactions, fetchPlanTransactions } from '../../api';
+import { capitalize } from '../../utils';
 
 const TransactionsTable = ({ id }: IProps) => {
   const { isLoading, data } = useQuery(['transactions'], () =>
@@ -15,6 +16,7 @@ const TransactionsTable = ({ id }: IProps) => {
     received_amount: `${transaction?.receive?.unit} ${Number(transaction?.receive?.amount)?.toFixed(
       10
     )}`,
+    status: capitalize(transaction?.status),
   }));
 
   return (

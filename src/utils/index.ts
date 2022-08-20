@@ -1,2 +1,3 @@
-export * from './date'
-export * from './generators'
+export * from './date';
+export * from './formatters';
+export * from './generators';

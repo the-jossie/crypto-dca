@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { useMutation, useQuery } from '@tanstack/react-query';
+import { toast } from 'react-toastify';
 import Toggle from 'react-toggle';
 
 import { fetchPlans, togglePlan } from '../api';
 import { queryClient } from '../config';
-import { toast } from 'react-toastify';
+import { capitalize } from '../utils';
 
-const usePlans = () => {
+const usePlans = ({ setShowTabs = () => {} }: { setShowTabs: Function }) => {
   const [showTransactions, setShowTransactions] = useState(false);
   const { isLoading, data } = useQuery(['plans'], fetchPlans);
   const [plans, setPlans] = useState<any[]>([]);
@@ -51,12 +52,14 @@ const usePlans = () => {
 
     if (action === 'view') {
       setShowTransactions(true);
+      setShowTabs(false);
     }
   };
 
   const formatPlans = (data: any) =>
     data?.plans?.map((plan: any) => ({
       ...plan,
+      name: capitalize(plan?.name),
       amount: `${plan?.market?.quote_unit.toUpperCase()} ${plan?.amount}`,
       asset: plan?.market?.base_unit?.toUpperCase(),
       toggle: (

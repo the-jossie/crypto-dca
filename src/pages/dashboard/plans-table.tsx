@@ -4,8 +4,9 @@ import { EditPlanModal, Table } from '../../components';
 
 import { usePlans } from '../../hooks/plans';
 import { TransactionsTable } from './transactions-table';
+import { capitalize } from '../../utils';
 
-const PlansTable = () => {
+const PlansTable = ({ setShowTabs = () => {} }: { setShowTabs: Function }) => {
   const {
     isLoading,
     plans,
@@ -16,7 +17,7 @@ const PlansTable = () => {
     showTransactions,
     setShowTransactions,
     handleSearch,
-  } = usePlans();
+  } = usePlans({ setShowTabs });
 
   return (
     <>
@@ -25,10 +26,13 @@ const PlansTable = () => {
           <h1 className="font-medium text-xl mb-10">
             <span
               className="cursor-pointer text-primary font-bold text-2xl"
-              onClick={() => setShowTransactions(false)}>
+              onClick={() => {
+                setShowTabs(true);
+                setShowTransactions(false);
+              }}>
               Plans
             </span>{' '}
-            / <span className="text-xl">{selectedRow?.name}</span> /{' '}
+            / <span className="text-xl">{capitalize(selectedRow?.name)}</span> /{' '}
             <span className="text-lg">Transactions</span>
           </h1>
           <TransactionsTable id={selectedRow?._id} />

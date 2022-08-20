@@ -10,14 +10,15 @@ const DashboardPage = () => {
   const { userAccountIsSynced }: any = useContext(UserContext);
   const tabs = ['My Plans', 'My Transactions'];
   const [activeTab, setActiveTab] = useState(tabs[0]);
+  const [showTabs, setShowTabs] = useState(true);
 
   return (
     <div className="relative h-screen w-screen overflow-hidden flex flex-col">
       <Navbar />
       <div className="px-4 lg:px-[52px] py-[38px] flex-grow flex flex-col overflow-hidden">
         <PageHeader title={activeTab} showBtn={true} />
-        <Tabs options={tabs} {...{ activeTab }} {...{ setActiveTab }} />
-        {activeTab === 'My Plans' && <PlansTable />}
+        {showTabs && <Tabs options={tabs} {...{ activeTab }} {...{ setActiveTab }} />}
+        {activeTab === 'My Plans' && <PlansTable setShowTabs={setShowTabs} />}
         {activeTab === 'My Transactions' && <TransactionsTable />}
       </div>
       {!userAccountIsSynced && <SyncPage />}
