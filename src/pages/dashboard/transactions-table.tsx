@@ -16,7 +16,20 @@ const TransactionsTable = ({ id }: IProps) => {
     received_amount: `${transaction?.receive?.unit} ${Number(transaction?.receive?.amount)?.toFixed(
       10
     )}`,
-    status: capitalize(transaction?.status),
+    status: (
+      <span
+        className={`text-white py-1 px-3 rounded font-bold text-md ${
+          transaction?.status === 'done'
+            ? 'bg-green-400'
+            : transaction?.status === 'error'
+            ? 'bg-red-400'
+            : transaction?.status === 'confirm'
+            ? 'bg-blue-300'
+            : 'bg-gray-400'
+        }`}>
+        {capitalize(transaction?.status)}
+      </span>
+    ),
   }));
 
   return (
