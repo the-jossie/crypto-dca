@@ -1,5 +1,4 @@
-import './dropdown.scss';
-import { generateId } from '../../utils';
+import { generateId } from '../utils';
 
 const Dropdown = ({
   label = '',

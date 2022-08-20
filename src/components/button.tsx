@@ -1,20 +1,5 @@
-import './button.scss';
-
 import { ReactElement } from 'react';
 
-interface PropTypes {
-  text?: string;
-  iconPosition?: 'left' | 'right';
-  children?: ReactElement | string;
-  loading?: boolean;
-  disabled?: boolean;
-  size?: 'normal' | 'small' | 'large';
-  customClasses?: string;
-  type?: 'submit' | 'reset' | 'button';
-  onClick?: React.DOMAttributes<HTMLButtonElement>['onClick'] | Function;
-  outline?: boolean;
-  variant?: 'primary' | 'secondary';
-}
 const Button = ({
   text,
   iconPosition,
@@ -28,7 +13,9 @@ const Button = ({
   outline = false,
   variant = 'primary',
 }: PropTypes) => {
-  const computedClasses = ['Button text-white bg-primary'];
+  const computedClasses = [
+    'rounded-md lg:rounded-lg disabled:bg-[#ccc] focus:outline-none flex items-center justify-center px-2 lg:px-6 space-x-[1.25rem] text-white bg-primary',
+  ];
   if (size === 'large') {
     computedClasses.push('font-bold h-12 lg:h-16');
   } else if (size === 'small') {
@@ -62,5 +49,18 @@ const Button = ({
     </button>
   );
 };
+interface PropTypes {
+  text?: string;
+  iconPosition?: 'left' | 'right';
+  children?: ReactElement | string;
+  loading?: boolean;
+  disabled?: boolean;
+  size?: 'normal' | 'small' | 'large';
+  customClasses?: string;
+  type?: 'submit' | 'reset' | 'button';
+  onClick?: React.DOMAttributes<HTMLButtonElement>['onClick'] | Function;
+  outline?: boolean;
+  variant?: 'primary' | 'secondary';
+}
 
 export { Button };

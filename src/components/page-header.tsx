@@ -1,15 +1,7 @@
-import './page-header.scss';
 import { useState } from 'react';
 
-import { AddPlanModal, Button, Search } from '../../components';
-import { AddIcon } from '../../components/vectors';
-
-interface IProps {
-  handleSearch?: Function;
-  showSearch?: boolean;
-  showBtn?: boolean;
-  title: string;
-}
+import { AddPlanModal, Button, Search } from './';
+import { AddIcon } from '../vectors';
 
 const PageHeader = ({
   handleSearch = () => {},
@@ -31,10 +23,10 @@ const PageHeader = ({
 
   return (
     <>
-      <div className="PageHeader">
-        <h1>{title}</h1>
+      <div className="flex flex-col lg:flex-row space-y-4 lg:space-y-0 lg:items-center justify-between mb-8">
+        <h1 className="text-[32px] text-dark font-medium">{title}</h1>
 
-        <div className="actions">
+        <div className="flex items-center space-x-4 lg:space-x-[3.25rem]">
           {showSearch && (
             <Search
               value={search}
@@ -63,4 +55,11 @@ const PageHeader = ({
     </>
   );
 };
+interface IProps {
+  handleSearch?: Function;
+  showSearch?: boolean;
+  showBtn?: boolean;
+  title: string;
+}
+
 export { PageHeader };

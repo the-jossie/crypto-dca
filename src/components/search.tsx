@@ -1,18 +1,6 @@
-import './search.scss';
-
 import PropTypes from 'prop-types';
 
 import { SearchIcon } from '../vectors';
-
-interface PropTypes {
-  label?: string;
-  value?: string;
-  placeholder?: string;
-  onChange?: Function;
-  customClass?: string;
-  focusState?: boolean;
-  triggerSearch?: (search: string) => void;
-}
 
 function Search({
   placeholder,
@@ -30,7 +18,7 @@ function Search({
     <>
       {label && <label className="mb-2 font-bold text-base op">{label}</label>}
       <form
-        className={`Search flex items-center  px-4 py-3 rounded text-sm font-normal bg-grey3 pr-12`}
+        className={`w-[20rem] flex items-center  px-4 py-3 rounded text-sm font-normal bg-grey3 pr-12`}
         onSubmit={handleSubmit}>
         <SearchIcon />
         <input
@@ -47,4 +35,14 @@ function Search({
     </>
   );
 }
+interface PropTypes {
+  label?: string;
+  value?: string;
+  placeholder?: string;
+  onChange?: Function;
+  customClass?: string;
+  focusState?: boolean;
+  triggerSearch?: (search: string) => void;
+}
+
 export { Search };

@@ -4,7 +4,7 @@ import { useMutation } from '@tanstack/react-query';
 
 import { authenticate } from '../../api';
 import { Button, Input } from '../../components';
-import { APP_NAME, queryClient } from '../../config';
+import { APP_NAME } from '../../config';
 import { UserContext } from '../../contexts';
 import { useSessionStorage } from '../../hooks/session';
 

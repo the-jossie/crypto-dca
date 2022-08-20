@@ -1,5 +1,3 @@
-import './dashboard.scss';
-
 import { useContext, useState } from 'react';
 
 import { Navbar, PageHeader, Tabs } from '../../components';
@@ -14,9 +12,9 @@ const DashboardPage = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
-    <div className="Dashboard">
+    <div className="relative h-screen w-screen overflow-hidden flex flex-col">
       <Navbar />
-      <div className="PageSection">
+      <div className="px-4 lg:px-[52px] py-[38px] flex-grow flex flex-col overflow-hidden">
         <PageHeader title={activeTab} showBtn={true} />
         <Tabs options={tabs} {...{ activeTab }} {...{ setActiveTab }} />
         {activeTab === 'My Plans' && <PlansTable />}

@@ -63,11 +63,6 @@ const Table = ({
                     </td>
                   ) : null}
                 </tr>
-                {/* <tr className="lg:hidden border-none !p-0">
-                  <td colSpan={headings?.length + 1} className="!p-0 !m-0">
-                    <hr />
-                  </td>
-                </tr> */}
               </Fragment>
             ))}
             {isLoading ? (

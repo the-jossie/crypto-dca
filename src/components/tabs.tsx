@@ -1,17 +1,8 @@
-import './tabs.scss';
-
 import PropTypes from 'prop-types';
-import React from 'react';
-
-interface PropTypes {
-  activeTab?: string;
-  setActiveTab?: Function;
-  options?: string[];
-}
 
 const Tabs = ({ activeTab = '', setActiveTab = () => {}, options = [] }: PropTypes) => {
   return (
-    <div className="Tabs">
+    <div className="flex items-center space-x-4 border-b mb-4">
       {options.map((option, index) => (
         <span
           key={`page_tab-${index}`}
@@ -27,4 +18,10 @@ const Tabs = ({ activeTab = '', setActiveTab = () => {}, options = [] }: PropTyp
     </div>
   );
 };
+interface PropTypes {
+  activeTab?: string;
+  setActiveTab?: Function;
+  options?: string[];
+}
+
 export { Tabs };

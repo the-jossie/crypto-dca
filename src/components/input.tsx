@@ -1,25 +1,4 @@
-import { ChangeEventHandler, ReactElement, useState } from 'react';
-
-interface PropTypes {
-  type?: 'text' | 'email' | 'password' | 'date';
-  label?: string;
-  value?: string | number;
-  placeholder?: string;
-  children?: ReactElement;
-  childrenPosition?: 'left' | 'right';
-  onChange?: Function;
-  required?: boolean;
-  error?: string;
-  disabled?: boolean;
-  additionalInfo?: string;
-  customClass?: string;
-  autoCorrect?: boolean;
-  full?: boolean;
-  onMouseLeave?: Function;
-  onBlur?: any;
-  showVisisbilityIcon?: boolean;
-  maxLength?: number | string;
-}
+import { ReactElement, useState } from 'react';
 
 const Input = ({
   type = 'text',
@@ -37,7 +16,6 @@ const Input = ({
   full = true,
   customClass = '',
   maxLength,
-  showVisisbilityIcon = true,
   onBlur = () => {},
 }: PropTypes) => {
   const [visible, setVisible] = useState(false);
@@ -108,5 +86,25 @@ const Input = ({
     </div>
   );
 };
+
+interface PropTypes {
+  type?: 'text' | 'email' | 'password' | 'date';
+  label?: string;
+  value?: string | number;
+  placeholder?: string;
+  children?: ReactElement;
+  childrenPosition?: 'left' | 'right';
+  onChange?: Function;
+  required?: boolean;
+  error?: string;
+  disabled?: boolean;
+  additionalInfo?: string;
+  customClass?: string;
+  autoCorrect?: boolean;
+  full?: boolean;
+  onMouseLeave?: Function;
+  onBlur?: any;
+  maxLength?: number | string;
+}
 
 export { Input };

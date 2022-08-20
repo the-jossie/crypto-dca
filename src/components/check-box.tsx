@@ -1,5 +1,3 @@
-import './check-box.scss';
-
 import { useState } from 'react';
 
 function CheckBox({
@@ -20,7 +18,9 @@ function CheckBox({
 
   return (
     <div
-      className={`Checkbox ${selected ? 'active' : ''} ${customClass}`}
+      className={`flex items-center justify-center w-6 h-6 border border-[#E0E0E0]  rounded-[1px] cursor-pointer ml-8 ${
+        selected ? 'bg-primary border-primary' : ''
+      } ${customClass}`}
       onClick={handleChange}></div>
   );
 }

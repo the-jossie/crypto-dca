@@ -1,6 +1,0 @@
-.Checkbox {
-  @apply flex items-center justify-center w-6 h-6 border border-[#E0E0E0]  rounded-[1px] cursor-pointer ml-8;
-  &.active {
-    @apply bg-primary border-primary;
-  }
-}

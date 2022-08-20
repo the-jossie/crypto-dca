@@ -1,19 +1,9 @@
-import './modal.scss';
-
-import { CloseIcon } from '../vectors';
+import { CloseIcon } from '../../vectors';
 import { ReactElement } from 'react';
-
-interface PropTypes {
-  close: Function;
-  text?: string;
-  children?: ReactElement;
-  width?: string;
-  showCloseBtn?: boolean;
-}
 
 const Modal = ({ close = () => {}, children, width, showCloseBtn = true }: PropTypes) => {
   return (
-    <div className="Modal">
+    <div className="fixed z-50 w-full h-full flex flex-col justify-center items-center inset-0 backdrop-blur-sm bg-dark bg-opacity-[52%]">
       <div className="-mt-10 space-y-2">
         {showCloseBtn && (
           <div onClick={() => close()} className="flex justify-end cursor-pointer">
@@ -21,7 +11,7 @@ const Modal = ({ close = () => {}, children, width, showCloseBtn = true }: PropT
           </div>
         )}
         <div
-          className={`inner border shadow bg-white rounded z-50 w-96 ${
+          className={`w-96 lg:w-[25rem] border shadow bg-white rounded z-50 ${
             width ? width : 'w-[25rem]'
           }`}>
           <div className="p-8">{children && children}</div>
@@ -36,5 +26,12 @@ const Modal = ({ close = () => {}, children, width, showCloseBtn = true }: PropT
     </div>
   );
 };
+interface PropTypes {
+  close: Function;
+  text?: string;
+  children?: ReactElement;
+  width?: string;
+  showCloseBtn?: boolean;
+}
 
 export { Modal };
