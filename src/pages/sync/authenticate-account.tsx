@@ -43,7 +43,12 @@ const AuthenticateAccount = () => {
       <div>
         <h3 className="font-semibold text-2xl text-dark mb-8">Enter OTP</h3>
         <form className="space-y-6" onSubmit={onSubmit}>
-          <Input label="OTP" value={code} onChange={(value: string) => setCode(value)} />
+          <Input
+            label="OTP"
+            value={code}
+            onChange={(value: string) => setCode(value)}
+            placeholder="Enter code"
+          />
           <div className="flex items-center justify-center pt-14 space-x-6">
             <Button text="Done" type="submit" loading={isLoading} />
           </div>

@@ -34,6 +34,8 @@ const SyncAccount = ({ setStage = () => {} }: PropTypes) => {
             label="Quidax Secret Key"
             value={secretKey}
             onChange={(value: string) => setSecretKey(value)}
+            type="password"
+            placeholder="Enter key"
           />
           <div className="flex items-center justify-center pt-14 space-x-6">
             <Button text="Sync" type="submit" loading={isLoading} />
